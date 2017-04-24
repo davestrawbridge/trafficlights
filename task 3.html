@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<div><button onclick="changeColour()">Change lights</button></div>
+		<img id="lights">
+		<script>
+
+			var imgSequence = ["red.png", "red-and-amber.png", "green.png", "amber.png"];
+			var imgElement = document.getElementById("lights");
+			var lightIndex = 0;
+			var imgLen = imgSequence.length;
+			imgElement.src = imgSequence[lightIndex];
+
+			function changeColour()
+			{
+				if(lightIndex < imgLen - 1)
+				{
+					lightIndex++;
+				}
+				else
+				{
+					lightIndex = 0;                
+				}
+
+				imgElement.src = imgSequence[lightIndex];                    
+			}
+		</script>
+	</body>
+</html>
